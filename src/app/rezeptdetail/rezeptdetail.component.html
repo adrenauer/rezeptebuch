@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="{{ ausgewaehltesRezept?.imagePath }}" alt="" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ ausgewaehltesRezept?.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">Zur Einkaufsliste</button>
+    <button class="btn btn-primary">Bearbeiten</button>
+    <button class="btn btn-danger">Löschen</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{ ausgewaehltesRezept?.description }}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+      class="list-group-item"
+      *ngFor="let zutat of ausgewaehltesRezept?.zutaten">{{ zutat.name }} {{ zutat.amount }}</li>
+    </ul>
+  </div>
+</div>

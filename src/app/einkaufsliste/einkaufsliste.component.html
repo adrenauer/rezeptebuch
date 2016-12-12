@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-einkaufliste-hinzufuegen></app-einkaufliste-hinzufuegen>
+    <hr>
+    <ul class="list-group">
+    <a
+    href=""
+    class="list-group-item"
+    style="curser: pointer"
+    *ngFor="let zutat of zutaten">{{ zutat.name }} ({{ zutat.amount }})</a>
+    </ul>
+  </div>
+</div>
